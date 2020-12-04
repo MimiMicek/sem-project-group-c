@@ -13,6 +13,7 @@ if(isset($_POST['timestamp']))
 }
 
 $pageName = $_POST['pageName'] ?? '';
+$spacePressed = $_POST['spacePressed'] ?? '';
 
 try {
     global $dateTime;
@@ -22,9 +23,19 @@ try {
     $stmt->bindValue(':pageName', $pageName );
     $stmt->execute();
 
+    $stmt2 = $db->prepare( 'INSERT INTO attention VALUES(null,:spacePressed)' );
+    $stmt2->bindValue(':spacePressed', $spacePressed );
+    $stmt2->execute();
+
+
     //Using rowcount() when INSERTing, UPDATEing or DELETEing
     if( $stmt->rowCount() == 0 ){
         echo 'Sorry, the timestamp was not saved!';
+        exit;
+    }
+
+    if( $stmt2->rowCount() == 0 ){
+        echo 'Sorry, the spacePressed was not saved!';
         exit;
     }
 

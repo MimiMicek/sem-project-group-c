@@ -18,6 +18,13 @@ body {
     right: 0;
 }
 
+.container {
+    margin-top: 33px;
+    width: 80%;
+    margin: 0 auto;
+    background-color: pink;
+}
+
 #mazeContainer {
     transition-property: opacity;
     transition-duration: 1s;

@@ -13,10 +13,11 @@ if(isset($_POST['timestamp']))
 }
 
 $pageName = $_POST['pageName'] ?? '';
-$essay = $_POST['essay'] ?? '';
+$answer1 = $_POST['answer1'] ?? '';
+$answer2 = $_POST['answer2'] ?? '';
+//answer3 = $_POST['answer3'] ?? '';
 
 var_dump($pageName);
-var_dump($essay);
 var_dump($dateTime);
 
 try {
@@ -27,8 +28,10 @@ try {
     $stmt->bindValue(':pageName', $pageName );
     $stmt->execute();
 
-    $stmt = $db->prepare( 'INSERT INTO essays VALUES(null,:essay)' );
-    $stmt->bindValue(':essay', $essay );
+    $stmt = $db->prepare( 'INSERT INTO essays VALUES(null,:answer1,:answer2)' );
+    $stmt->bindValue(':answer1', $answer1 );
+    $stmt->bindValue(':answer2', $answer2 );
+    //$stmt->bindValue(':answer3', $answer3 );
     $stmt->execute();
 
     //Using rowcount() when INSERTing, UPDATEing or DELETEing
