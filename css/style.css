@@ -536,6 +536,10 @@ select:focus {
     /* margin-top: -30px; */
   }
 
+  .attention-page-btn-wrap button#start:hover {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
   .enhanced-timer {
       color: red;
       animation-name: stretch; 

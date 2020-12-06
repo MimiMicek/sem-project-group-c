@@ -4,7 +4,7 @@ try{
 
     $sUserName = 'root';
     $sPassword = '';
-    $sConnection = "mysql:host=localhost; dbname=sem_project; charset=utf8mb4";
+    $sConnection = "mysql:host=localhost; dbname=sem_project_c; charset=utf8mb4";
 
     $aOptions = array(
         //PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION, //comment out when doing a transaction

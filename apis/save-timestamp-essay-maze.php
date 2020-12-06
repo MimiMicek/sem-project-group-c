@@ -28,7 +28,7 @@ try {
     $stmt->bindValue(':pageName', $pageName );
     $stmt->execute();
 
-    $stmt = $db->prepare( 'INSERT INTO essays VALUES(null,:answer1,:answer2)' );
+    $stmt = $db->prepare( 'INSERT INTO spatial_maze VALUES(null,:answer1,:answer2)' );
     $stmt->bindValue(':answer1', $answer1 );
     $stmt->bindValue(':answer2', $answer2 );
     //$stmt->bindValue(':answer3', $answer3 );
