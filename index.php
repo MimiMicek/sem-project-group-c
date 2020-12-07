@@ -52,7 +52,7 @@ ini_set('display_errors', 0);
     //     } else {
     //         clearInterval(timer);
     //         document.getElementById('btnTimestamp').click();
-    //     <?php /*header("refresh:60;url=sem-project/write-essay-solve-maze.php");*/?>
+    //     <?php /*header("refresh:60;url=sem-project/spatial-maze.php");*/?>
     //     }
     // }
     // window.onload = function() {

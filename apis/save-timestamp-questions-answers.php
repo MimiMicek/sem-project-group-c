@@ -51,7 +51,7 @@ try {
     echo $ex;
 }
 
-header("refresh:0;url=../write-essay-solve-maze.php");
+header("refresh:0;url=../spatial-maze.php");
 sendResponse(1, __LINE__, "Saved!");
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
